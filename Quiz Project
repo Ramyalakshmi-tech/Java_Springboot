@@ -7,6 +7,7 @@ Abstract class :
 
 the problem is in car class we can declare methods like drive,horn,play music and we didn't define/ implement the method means the buyers knw these are the features
 and got surprised why it is not working. just declare the method using abstract keyword. so no class can make a object of this method ....
-other class like bmw can extend car and define all the declared absract methods in it, else bmw will become abstract. And again abstract method can only belong to abstract class.
+other class like bmw can extend car and define all the declared absract methods in it, else bmw will become abstract.
+And again abstract method can only belong to abstract class.
 so, make cat as abstract class.
 An abstact class can have normal implemented / non abstract class or abstract class/non implemnted class etc..
