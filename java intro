@@ -7,7 +7,9 @@ JVM(java virtual machine) -> is really important for java to run. Java is platfo
   if we install jdk, jre and jvm latest version will be included . the current long term support(LTS) of jdk is java 21.
 
   There are 2 types of data types in java 1. primitive ( Integer, Float, Character, Boolean ) inside integer(int,double,short,byte..) int range is 4 bytes which is 32 bits (-2^31 to 2^31-1)
-  long(8 bytes) -2^63 to 2^63-1 , short (2 bytes) -2^15 to 2^15-1 , byte ( 1 bytes) -2^7 to 2^7-1 .(-128 to 127)
+  float (4 bytes ) , double(8 bytes), long(8 bytes) -2^63 to 2^63-1 , short (2 bytes) -2^15 to 2^15-1 , byte ( 1 bytes) -2^7 to 2^7-1 .(-128 to 127) , character(2 bytes) 
+
+  All languages follows ASCII values . but, java follows UNICODE. (2 bytes).... for long and float ended with l and f respectively.
   
   
   
