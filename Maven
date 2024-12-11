@@ -1,0 +1,15 @@
+Maven - Project Management tool
+
+the problem there are libraries which are in jar format we have to install for connectors .
+For example, spring 5 won't work with hibernate 6 some issues arises.. so, inorder to avoid that, we just install the packages like maven, gradle and ivy.
+it contains the compatable version . maven is beginner friendly. it also gives plug ins for testing etc..
+
+ArcheTypes - Templating tool
+it is like using the already existed template or creating own template and using it many times.
+put all the dependencies in Project object model (POM.xml)... package or library name should be GAV (Group Id, Artifact Id and version)
+Maven always look and work from Effective POM.
+
+Sometimes, dependencies are vulnerable..so, maven will search in local , then office folder and then web.
+
+
+
