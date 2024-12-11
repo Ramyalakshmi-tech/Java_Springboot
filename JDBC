@@ -1,0 +1,15 @@
+JDBC - Java database connectivity
+
+relational database management system (RDBMS) helps to store it in tabular form.
+JDBC is an API. It is a part of JDK. It gives an Api to connect with db. many dbs(oracle,postgres,mysql,nosql,h2,db2)
+Once i connect app with postsql,need to change to mysql...do i need to change lot of code?
+inOrder to avoid it, jdbc has only declared interfaces which will be implemented inside databases.
+
+1. import packages
+2. Load driver
+3. Register driver
+4. create connection
+5. create statement
+6. execute statement
+7. close
+
