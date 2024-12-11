@@ -3,4 +3,12 @@ JVM(java virtual machine) -> is really important for java to run. Java is platfo
   That one file should contain main method in it. The execution will start from first file only. And the signature of main method should be " public static void main(String args[]) " 
   since java is an object oriented language . it needs a class. After it starts to run..but for run, needs JRE environment (Java run time environment ) platform . so,
   jvm + libraries = jre . jdk contains jre . but it is not necessary for other machine to run my code. only jre and jvm is needed.
+
+  if we install jdk, jre and jvm latest version will be included . the current long term support(LTS) of jdk is java 21.
+
+  There are 2 types of data types in java 1. primitive ( Integer, Float, Character, Boolean ) inside integer(int,double,short,byte..) int range is 4 bytes which is 32 bits (-2^31 to 2^31-1)
+  long(8 bytes) -2^63 to 2^63-1 , short (2 bytes) -2^15 to 2^15-1 , byte ( 1 bytes) -2^7 to 2^7-1 .(-128 to 127)
+  
+  
+  
   
