@@ -1,0 +1,13 @@
+Spring framework:
+
+springboot works on spring framework. If we want to develop enterprise level framework in java , spring framwork is best.
+before spring framwork Jakarta enterprise beans (Java beans), web App(struts),databases with ORM ,we use hibernate, 
+now all in one called spring framework.Spring is a light weight framwork.it works with POJOs (the plain old java objects)
+before , spring works only dependency injection. now it evolved.
+
+Ioc and Di (Inversion of control and Dependency Injection):
+A developer should create an object, controls an object and delete the object.....so,it is not needed to be taken care by developer always.
+so,Ioc Container in Spring framework will take care of this. so, for example: if we have laptop and cpu ,2 objects are present in IOC container.
+but, it should be linked by dependency injection(Design pattern).
+
+
