@@ -19,6 +19,8 @@ example:
 public class Alien{
 pubic void code(){
   System.out.println("hello...");
+@Autowired
+Laptop laptop;
 }
 }
 public class solution{
@@ -29,4 +31,12 @@ obj.code();
 }
 This is called dependency injection.
 
+if another class is there
+public class Laptop{
+public void laptop(){
+System.out.println("Laptop");
+}
+}
+
+if more than one object is linked , Autowired annotations is needed.
 
