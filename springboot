@@ -10,4 +10,21 @@ A developer should create an object, controls an object and delete the object...
 so,Ioc Container in Spring framework will take care of this. so, for example: if we have laptop and cpu ,2 objects are present in IOC container.
 but, it should be linked by dependency injection(Design pattern).
 
+when spring framework comes, It has a lot of configurations for even Hello world also.so, springboot arrives.springboot 3 works on spring 6.
+Any object created or managed by spring is called beans.
+If I add @Component annotation before any class .. it will create a object of the class in ioc container in jvm.
+If we want it later from another class, we can call it by application context.
+example:
+@Component
+public class Alien{
+pubic void code(){
+  System.out.println("hello...");
+}
+}
+public class solution{
+public static void main(String[] args){
+Alien obj=context.getBean(Alien.class)
+obj.code();
+}
+}
 
