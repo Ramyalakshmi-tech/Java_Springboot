@@ -27,4 +27,6 @@ Alien obj=context.getBean(Alien.class)
 obj.code();
 }
 }
+This is called dependency injection.
+
 
