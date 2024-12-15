@@ -122,3 +122,19 @@ if it is primitive value, in bean , i have to use value , if it is a refernce, i
 </bean>
 <bean id="lap1 class="com.example.laptop"> </bean>
 
+Constructor Injection:-
+public class Alien{
+private int age; //since it is private,add getters and setters
+private Laptop lap;
+public void Alien(int age,Laptop lap){
+    this.age=age;
+    this.lap=lap;
+}
+}
+
+<bean id="alien" class="com.example.alien">
+<constructor-arg type="com.example.alien" ref="lap"/>  //it will work only if 2 arguments are different type,if 2 args are same types, 
+//remove type,put index=0, index=1 or name can also be used
+<constructor-arg type="int" value="21"/>  
+</bean>
+
