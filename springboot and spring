@@ -86,3 +86,39 @@ pubic void code(){
   System.out.println("hello...");
 }
 }
+
+Setter Injections:-
+In bean, we have to add the property and set the value..
+<bean id="alien" class="com.example.alien">
+<property name="age" value="21">
+</property>
+</bean>
+
+public class Alien{
+private int age; //since it is private,add getters and setters
+private Laptop lap;
+public void setLap(int lap){
+    this.lap=lap;
+}
+public lap getLap(){
+    return lap;
+}
+public void setAge(int age){
+    this.age=age;
+}
+public int getAge(){
+  return age;
+}
+pubic void code(){
+  System.out.println("hello...");
+}
+}
+
+Reference Attribute:-
+if it is primitive value, in bean , i have to use value , if it is a refernce, i have to use ref.
+<bean id="alien" class="com.example.alien">
+<property name="age" value="21"></property>
+<property name="laptop" ref="lap1"></property>  //id and ref should be same
+</bean>
+<bean id="lap1 class="com.example.laptop"> </bean>
+
