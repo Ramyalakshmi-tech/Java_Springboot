@@ -40,3 +40,49 @@ System.out.println("Laptop");
 
 if more than one object is linked , Autowired annotations is needed.
 
+The old one of application context is bean factory.but now bean factory is deprecated/outdated from spring 6.
+
+If we try the above code in spring, we have to create a ioc container by applicationcontext interface.There are so many ways .here we are trying 
+By implement xml .... 
+public class solution{
+  public static void main(String[] args){
+    ApplicationContext context=new ClassPathXmlApplicationContext("spring.xml"); // it will create all objects in xml file in this line itself
+    Alien obj=(Alien)context.getBean("alien");
+    obj.code();
+
+     Alien obj2=(Alien)context.getBean("alien");
+    obj2.code(); // even if i call second time, the same object is called..so,it is singleton.
+}
+}
+we have to create a xml file , so, put xml file name inside context..it will create a file.
+And open the file and add what is going to be my bean/object by adding the definition of bean and the structure is below...
+<bean id="alien" class="com.example.alien">
+</bean>
+id is optional, 
+If we want to create more objects , we want to change the scope...by default it is singleton(one obj is called by multiple times) , if we change it to 
+scope="prototype", then it is created many objects(number of times , it is called).
+
+Prototype:-
+
+public class solution{
+  public static void main(String[] args){
+    ApplicationContext context=new ClassPathXmlApplicationContext("spring.xml"); // it will create all objects in xml file in this line itself if it is singleton
+//if it is prototype, the obj will be created , when getBean() is called..
+    Alien obj=(Alien)context.getBean("alien");
+    obj.age=21;
+    obj.code();
+System.out.println(obj.age);  //21
+
+     Alien obj2=(Alien)context.getBean("alien");
+    obj2.code(); // even if i call second time, the same object is called..so,it is singleton.
+System.out.println(obj2.age); //0 (since it is prototype, new object value is printed)
+//if it singleton, 21 will be printed.
+}
+}
+
+public class Alien{
+int age;
+pubic void code(){
+  System.out.println("hello...");
+}
+}
