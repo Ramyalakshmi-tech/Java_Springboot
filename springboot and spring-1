@@ -138,3 +138,20 @@ public void Alien(int age,Laptop lap){
 <constructor-arg type="int" value="21"/>  
 </bean>
 
+AutoWiring :-
+
+if it is an interface, we have 2 classes implemented it .. we can use aurowire="byname" in bean
+if we have 2 same name, go for primary = "true"..
+
+Lazy init:-
+All objects are singleton by default,So all objects will be created when we call one object...Inorder to avoid it
+<bean id="com" name"lap" lazy-init="true"></bean> needs to be added.
+
+getBean by class,object..
+
+   Alien obj2=(Alien)context.getBean("alien");
+In this line, we used (Alien) as typeCasting, inOrder to avoid it, there is an another bean , where the parameter will be given as (name,type)
+Alien obj2=context.getBean("alien",Alien.class);gives the class..
+
+InnerBean:-
+if we want lap should be only work for Alien class... we can create a bean inside property in xml.
