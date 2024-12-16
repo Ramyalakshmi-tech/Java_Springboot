@@ -1,0 +1,57 @@
+In part 1, we have seen how to create obj using xml file. now it is java based configuration.
+1. create a folder called config and create a class app config for storing objects.
+
+public class solution{
+  public static void main(String[] args){
+    ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
+    Alien obj=context.getBean(Desktop.class);
+    obj.code();
+}
+}
+since, it is java based , cretae objects manually..In xml based config, bean tags are used, here @bean annotation needed
+AppConfig.class folder
+
+@Configuration
+public class AppConfig{
+@Bean
+@scope("prototype")
+    public Desktop desktop1(){
+          return new Desktop();
+} }
+In this line, we can also write
+ Alien obj=context.getBean("desktop1",Desktop.class);  //by including method name
+(or)
+add additional names in bean configuration , if we use any one of the additional name also fine...
+@Bean(name={"com2","desktop","beast"})
+if we want to create object every single time we call the same object, we have to make it prototype.
+
+Qualifier and Primary:-
+if computer is an interface for both desktop and laptop...
+@Configuration
+public class AppConfig{
+@Bean
+public Alien alien(@Qualifier(desktop) Computer com){ //either use qualifier to say that choose desktop or use primary
+    Alien obj = new Alien();
+    obj.setAge(21);
+    obj.compile();
+}
+@Bean
+    public Laptop laptop(){
+          return new Laptop();
+} 
+@Bean
+@Primary //optional
+public Desktop desktop1(){ 
+          return new Desktop();
+} }
+
+Component Stereotype Annotation
+
+we can make empty the appConfig class... by adding @Component to all the classes that we need to put in ioc container and 
+in appConfig
+
+@Configuration
+@ComponentScan("com.example") //package name
+public class AppConfig{
+}
+
