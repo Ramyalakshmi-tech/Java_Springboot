@@ -1,1 +1,38 @@
+There is no xml file or appConfig file for springboot.
+just use @SpringbootApplication in main class create a ioc container and put objects int it.
+use @Component for all objects that we want to create containers.
+use @Primary or @Qualifier("com") for 2 interface class with same arguments...
+package com.telusko.app;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Alien {
+    @Value("25")
+	  private int age;
+		private Computer comp;
+		public int getAge() {
+		return age;
+	}
+public void setAge(int age) {
+		this.age = age;
+	}
+public Computer getComp() {
+		return comp;
+	}
+@Autowired
+@Qualifier("laptop")
+	public void setComp(Computer comp) {
+		this.comp = comp;
+	}
+public void code() {
+		comp.compile();
+	}
+}
+
+if client sends or asks anything -> Controller (which helps send info from client to server and vice versa)-> service (all logics,processing)->DAO/Repository
+(interact with databases)-> databases
 
