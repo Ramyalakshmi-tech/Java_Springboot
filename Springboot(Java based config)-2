@@ -54,4 +54,12 @@ in appConfig
 @ComponentScan("com.example") //package name
 public class AppConfig{
 }
+1.field injection ... 
+@Autowired
+private computer com; it is a field injection and we can use qualifier ...Qualifier("name")..name should be in @Component("com2") like inside annotation.
+2.Constructor injection
+3.setter injection
+scope annotation is for singleton or prototype
+@value("21")   //it will hardcode the age value into 21.
+private int age;
 
