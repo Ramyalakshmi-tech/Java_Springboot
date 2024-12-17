@@ -13,3 +13,6 @@ inOrder to avoid it, jdbc has only declared interfaces which will be implemented
 6. execute statement
 7. close
 
+Inorder to make it easy, we are using jbdc driver from jdk and H2 from Database side..
+In repository layer, we can use some words from spring jpa (save,getStudemt,find etc..)
+To talk with database, we have jdbc template
