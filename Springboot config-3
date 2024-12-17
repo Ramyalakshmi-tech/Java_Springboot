@@ -35,4 +35,4 @@ public void code() {
 
 if client sends or asks anything -> Controller (which helps send info from client to server and vice versa)-> service (all logics,processing)->DAO/Repository
 (interact with databases)-> databases
-
+@Service, @Repository also includes @Component inside it.
