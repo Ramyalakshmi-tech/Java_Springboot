@@ -1,0 +1,7 @@
+Git is a distributed version control system which means we have copy of our historys
+if it is a centralized control system, copy of present code..
+install it and check it in command prompt by "git config --global --list" , you will get the username and the user email..
+
+staging area-- is the area where we ask git to work with
+git init -b main - initiate in branch main by creating it
+git status - gives main branch like branch name
