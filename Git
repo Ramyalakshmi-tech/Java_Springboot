@@ -5,3 +5,25 @@ install it and check it in command prompt by "git config --global --list" , you 
 staging area-- is the area where we ask git to work with
 git init -b main - initiate in branch main by creating it
 git status - gives main branch like branch name
+
+type "git log" to check the commits and all..
+
+if I want to add it to the staging area... use
+"git add ." 
+if i want the staging area to be committed
+"git commit -m "first commit"
+
+if i want to skip staging area, skip git add.
+"git commit -a -m "second commit"
+
+use 
+"git diff" to see the new changes in working directory
+if it is in staging area
+"git diff --staged"
+
+if i want to delete a particular file from the git ,
+"git rm --cached creds.txt" and then remove from working directory and then commit it to git
+
+if we want to work with 5 or more workers in the same project,
+usually, we use github,gitlab or bitbucket by Atlassian has been used
+
