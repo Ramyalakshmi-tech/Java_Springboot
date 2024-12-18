@@ -27,3 +27,7 @@ if i want to delete a particular file from the git ,
 if we want to work with 5 or more workers in the same project,
 usually, we use github,gitlab or bitbucket by Atlassian has been used
 
+If I want to commit using ssh link than https link, it will create a ssh key
+"ssh -keygen -o"
+it will create a key , click enter and "cd" and "ls-a"
+"cat id_rsa.pub"
