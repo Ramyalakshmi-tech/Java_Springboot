@@ -31,3 +31,8 @@ If I want to commit using ssh link than https link, it will create a ssh key
 "ssh -keygen -o"
 it will create a key , click enter and "cd" and "ls-a"
 "cat id_rsa.pub"
+
+we can add tag to the push by using "git tag v1.0" -m "18 dec 2024"
+"git push origin v1.0"
+
+
