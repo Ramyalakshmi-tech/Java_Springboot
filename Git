@@ -35,4 +35,18 @@ it will create a key , click enter and "cd" and "ls-a"
 we can add tag to the push by using "git tag v1.0" -m "18 dec 2024"
 "git push origin v1.0"
 
+we can clone the repository by using "git clone url.git"
+also "git clone -b main url.git"
 
+Inorder to reduce the bug impacts in main branch...people push it in other branches
+"git checkout feature1"  we dont have branch called feature1
+
+for creation
+"git checkout -b feature1" or
+"git switch -c feature2"
+
+"git branch" gives the list of branches and pointer in the active branch
+if we use "git switch main" it will go to main branch
+"git switch -" go to previous branch
+For deleting the branch feature1
+"git branch -d feature1" 
