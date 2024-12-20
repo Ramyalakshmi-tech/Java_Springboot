@@ -50,3 +50,24 @@ if we use "git switch main" it will go to main branch
 "git switch -" go to previous branch
 For deleting the branch feature1
 "git branch -d feature1" 
+
+whenever I put commit, the machine got snapshot of the code and gives an id which is my checkSum(Hexocode values)
+
+How to merge feature1 branch data to min branch
+"git pull origin main"
+"git switch main"
+"git merge feature1"
+
+"git log" will give the history
+if we dont want any branch history and all use rebase instead of merge..
+"git switch main"
+"git rebase feature3" 
+we will get clean tree..
+
+
+if we have one code in main branch.. we have same code in slight different in feature3 branch
+now i am going to merge feature3 into main branch
+due to same line is going to affect 
+it will fail due to merge conflict
+so, we have to change the line manually with people wat should come on this line and change accordingly 
+and then merge the branch
