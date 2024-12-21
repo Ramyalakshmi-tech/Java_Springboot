@@ -71,3 +71,30 @@ due to same line is going to affect
 it will fail due to merge conflict
 so, we have to change the line manually with people wat should come on this line and change accordingly 
 and then merge the branch
+If we want to time travel , we can go to "git log"
+and take the desired id of past commit , and type "git checkout id"
+we will get all info of that respective commit
+
+if i work on some feature which take lot of time, if i want to swich to other branch ... the current branch changes will go
+so, we are asked to commit or stash it
+"git stash"
+stash is something we can save our stuffs it will be created with a id..using that id , we can take that later...
+"git stash list"
+gives the list of ids that i put in stash
+
+if we want other repository into our git hub , we can create a repository and put all code and structure as it is
+it  is possible by using "git fork"
+
+A pull request (PR) is a feature in Git platforms (like GitHub, GitLab, or Bitbucket) that allows developers to propose changes to a repository. 
+It’s a way to notify the repository maintainers about the changes you’ve made in your branch and request them to merge those changes into the main project.
+
+Fork the original repository to your GitHub account.
+Clone your forked repository to your local system:
+"git clone https://github.com/your-username/forked-repo.git"
+
+Open a Pull Request
+Go to your forked repository on GitHub.
+You’ll see an option to Compare & pull request. Click it.
+Provide a title and description of your changes.
+Select the base repository and branch (e.g., main) where you want your changes to be merged.
+Submit the pull request.
