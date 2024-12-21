@@ -63,8 +63,6 @@ if we dont want any branch history and all use rebase instead of merge..
 "git switch main"
 "git rebase feature3" 
 we will get clean tree..
-
-
 if we have one code in main branch.. we have same code in slight different in feature3 branch
 now i am going to merge feature3 into main branch
 due to same line is going to affect 
@@ -98,3 +96,7 @@ You’ll see an option to Compare & pull request. Click it.
 Provide a title and description of your changes.
 Select the base repository and branch (e.g., main) where you want your changes to be merged.
 Submit the pull request.
+
+
+git fetch	Only updates the local metadata about the remote repository. Does not update the working directory.
+git pull	Fetches updates and automatically merges them into the current branch.
