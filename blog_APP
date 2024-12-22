@@ -1,0 +1,21 @@
+jpa repository internally extends saveAll, findById and sorting and paging..
+@Controller-make java class as  a spring MVC controller
+@ResponseBody-Converts java object into Json And again convert into Http response
+@RestController-Combination of above both
+
+@GetMapping-used to convert incoming http get request into this method
+@PathVariable-used to bind method argument with the URI template variable
+@ResquestParam-used to extract query parameter in the URL
+
+
+@PostMapping-used for mapping HTTP Post request onto specific handler method.
+@RequestBody-used to convert http response json into java object. 
+@ResponseStatus-used to show status of response
+
+@PutMapping-used to update the existing values
+@DeleteMapping-used to delete the respective id
+
+@RequestEntity-used for return type which is generic and in default we can use 200.ok kinda http status.
+@RequestMapping-used for base URL(non repeating url)
+
+@MappedSuperClass-no need to add that rows in table/entity but need to add along with it.
