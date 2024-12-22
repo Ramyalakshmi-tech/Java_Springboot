@@ -19,3 +19,7 @@ jpa repository internally extends saveAll, findById and sorting and paging..
 @RequestMapping-used for base URL(non repeating url)
 
 @MappedSuperClass-no need to add that rows in table/entity but need to add along with it.
+
+@ResponseStatus- it is used in exception class, it will cause springboot to respond with the specified http status code.
+whenever the exception is thrown from your controller.(ResourceNotFoundException)
+
