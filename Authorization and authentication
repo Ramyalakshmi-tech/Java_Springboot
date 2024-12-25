@@ -59,8 +59,7 @@ Step 1: Authentication
 1. Username/Password Authentication: Using Spring Security's built-in UsernamePasswordAuthenticationFilter, the credentials are sent in the request body or header, 
 and Spring Security authenticates them against a database or another authentication provider.
 
-java
-Copy code
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -87,9 +86,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 Explanation:
 This configuration allows two users: user and admin with different roles.
 The /admin/** URL is restricted to users with the role ADMIN, and /user/** is restricted to USER.
-Step 2: Authorization
-2. Role-Based Access Control (RBAC): In the above configuration, the roles (USER, ADMIN) are used to determine what URLs the users can access.
 
+Step 2: Authorization
+
+2. Role-Based Access Control (RBAC): In the above configuration, the roles (USER, ADMIN) are used to determine what URLs the users can access.
 For example:
 A user with the role ADMIN can access /admin/**.
 A user with the role USER can access /user/**.
