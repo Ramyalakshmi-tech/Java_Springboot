@@ -1,0 +1,127 @@
+1. what is spring Actuator?
+Spring Actuator is a module in the Spring Boot framework that provides production-ready features to monitor and manage your application. It exposes a wide range of built-in endpoints that give insights into the application’s health, metrics, environment, and other runtime information.
+
+Key Features of Spring Actuator
+Monitoring and Management Endpoints:
+
+Provides REST endpoints to gather application information such as health, metrics, environment properties, and more.
+Customizable Endpoints:
+
+You can enable, disable, or customize endpoints based on your requirements.
+Integration with Monitoring Tools:
+
+Easily integrates with tools like Prometheus, Grafana, or ELK Stack for advanced monitoring.
+Metrics Collection:
+
+Tracks metrics like JVM memory usage, HTTP request count, response times, and database connection pool stats.
+Secured Endpoints:
+
+Endpoints can be secured with Spring Security to control access.
+How to Use Spring Actuator?
+1. Add the Dependency
+Include the Spring Boot Actuator dependency in your pom.xml:
+
+xml
+Copy code
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+2. Enable Endpoints
+By default, some endpoints are enabled. You can configure more in application.properties:
+
+properties
+Copy code
+management.endpoints.web.exposure.include=*
+management.endpoint.health.show-details=always
+management.endpoints.web.exposure.include=*: Exposes all endpoints.
+management.endpoint.health.show-details=always: Shows detailed health information.
+3. Run the Application
+Start your Spring Boot application and access the endpoints.
+
+4. Common Endpoints
+Endpoint	Description	URL (Default)
+/actuator	Lists all available actuator endpoints	http://localhost:8080/actuator
+/actuator/health	Shows the application's health status	http://localhost:8080/actuator/health
+/actuator/metrics	Displays application metrics	http://localhost:8080/actuator/metrics
+/actuator/env	Exposes environment properties	http://localhost:8080/actuator/env
+/actuator/info	Shows custom application information (e.g., version, name, etc.)	http://localhost:8080/actuator/info
+Customizing Actuator
+Adding Custom Info
+You can add custom application info in application.properties:
+
+properties
+Copy code
+info.app.name=MyApplication
+info.app.version=1.0.0
+The /actuator/info endpoint will now show:
+
+json
+Copy code
+{
+  "app": {
+    "name": "MyApplication",
+    "version": "1.0.0"
+  }
+}
+Adding a Custom Endpoint
+You can define your own custom actuator endpoint:
+
+java
+Copy code
+import org.springframework.boot.actuate.endpoint.web.annotation.RestControllerEndpoint;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestControllerEndpoint(id = "customEndpoint")
+@RestController
+public class CustomActuatorEndpoint {
+
+    @GetMapping
+    public String customEndpoint() {
+        return "This is a custom actuator endpoint!";
+    }
+}
+Access it at: http://localhost:8080/actuator/customEndpoint
+
+Securing Actuator Endpoints
+To secure actuator endpoints, include Spring Security and configure access:
+
+xml
+Copy code
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+In application.properties:
+
+properties
+Copy code
+management.endpoints.web.exposure.include=health,info
+In your SecurityConfig class:
+
+java
+Copy code
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.web.SecurityFilterChain;
+
+@Configuration
+public class SecurityConfig {
+
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http.authorizeHttpRequests()
+            .requestMatchers("/actuator/health", "/actuator/info").permitAll()
+            .anyRequest().authenticated()
+            .and().httpBasic();
+        return http.build();
+    }
+}
+Benefits of Using Spring Actuator
+Easier Monitoring: Provides metrics and health checks.
+Production-Ready: Simplifies integration with monitoring tools.
+Customizable: Flexible configuration and extensibility.
+Security: Easily control access to endpoints.
+
+2. spring Aop:
