@@ -5,49 +5,50 @@ Authentication and Authorization are two critical aspects of security in web app
 Definition: Authentication is the process of verifying the identity of a user, system, or service. It ensures that the entity requesting access is who it claims to be.
 Goal: To check if the user is who they say they are.
 Authentication Methods
-Basic Authentication
 
+1.Basic Authentication
 How it works: The client sends the username and password in an HTTP header.
 Usage: Typically used for simple applications or during development.
 Example:
 Header: Authorization: Basic base64(username:password)
-Token-Based Authentication (e.g., JWT)
 
+2.Token-Based Authentication (e.g., JWT)
 How it works: The client sends a token (usually a JWT - JSON Web Token) in the request header. The server validates the token to authenticate the user.
 Usage: Used for modern web applications, especially those with a stateless architecture (like SPAs).
 Example:
 Header: Authorization: Bearer <JWT_token>
-OAuth
 
+3.OAuth
 How it works: OAuth is a delegation protocol where the user authorizes a third-party application to access their resources without sharing their password. It uses tokens for access.
 Usage: Common in applications that integrate with external services (e.g., logging in with Google or Facebook).
 Example: OAuth 2.0 is used in social logins (Google, Facebook, etc.).
-Session-Based Authentication
 
+4.Session-Based Authentication
 How it works: After a user logs in, the server creates a session and stores the session identifier (session ID) in a cookie. The client sends the cookie with each request to authenticate.
 Usage: Traditional web apps where the server manages user sessions.
 Example:
 Cookie: JSESSIONID=abcd1234
+
 2. Authorization
 Definition: Authorization is the process of determining what actions or resources an authenticated user is allowed to access. It checks the permissions and roles associated with the authenticated user.
 Goal: To decide what the user is allowed to do after being authenticated.
-Authorization Methods
-Role-Based Access Control (RBAC)
+Authorization Methods.
 
+1.Role-Based Access Control (RBAC)
 How it works: Users are assigned roles, and each role has specific permissions. The system checks the user's role before granting access to resources.
 Example:
 Admin: Full access to all resources.
 User: Read-only access to some resources.
-Attribute-Based Access Control (ABAC)
 
+2.Attribute-Based Access Control (ABAC)
 How it works: Permissions are granted based on the attributes of the user, environment, and resource. It provides more fine-grained control than RBAC.
 Example: A user with a certain department attribute may only access resources associated with their department.
-Access Control Lists (ACL)
 
+3.Access Control Lists (ACL)
 How it works: ACLs specify which users or groups have access to which resources and what kind of access (read, write, execute, etc.) they have.
 Example: A file might have an ACL specifying that User1 can read it, and User2 can both read and write it.
-Scope-Based Authorization (OAuth 2.0)
 
+4.Scope-Based Authorization (OAuth 2.0)
 How it works: In OAuth, the access token includes scopes that define what actions the user is allowed to perform on resources (e.g., read, write, update).
 Example: A user may grant an app permission to "read" their calendar but not "write" to it.
 Authentication and Authorization in Practice
@@ -55,7 +56,8 @@ Spring Security (Example)
 Spring Security provides a comprehensive framework for authentication and authorization in Java-based web applications.
 
 Step 1: Authentication
-1. Username/Password Authentication: Using Spring Security's built-in UsernamePasswordAuthenticationFilter, the credentials are sent in the request body or header, and Spring Security authenticates them against a database or another authentication provider.
+1. Username/Password Authentication: Using Spring Security's built-in UsernamePasswordAuthenticationFilter, the credentials are sent in the request body or header, 
+and Spring Security authenticates them against a database or another authentication provider.
 
 java
 Copy code
