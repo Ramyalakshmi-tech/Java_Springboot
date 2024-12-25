@@ -124,4 +124,48 @@ Production-Ready: Simplifies integration with monitoring tools.
 Customizable: Flexible configuration and extensibility.
 Security: Easily control access to endpoints.
 
-2. spring Aop:
+2. springboort annotations:
+
+1. Configuration Annotations
+Annotation	Description
+@SpringBootApplication 	Combines @Configuration, @EnableAutoConfiguration, and @ComponentScan. It is the entry point for Spring Boot applications.
+@Configuration	      Indicates that the class has @Bean definitions and can be used by the Spring IoC container.
+@Bean	              Marks a method that will return an object to be managed by the Spring container.
+@PropertySource       Loads properties from an external file into the Spring Environment.
+
+2.
+Spring Boot makes extensive use of annotations to simplify development. These annotations are categorized based on their functionality, including configuration, dependency injection, REST APIs, and more. Here's an overview of key annotations in Spring Boot and their meanings:
+
+1. Configuration Annotations
+Annotation	Description
+@SpringBootApplication	Combines @Configuration, @EnableAutoConfiguration, and @ComponentScan. It is the entry point for Spring Boot applications.
+@Configuration	Indicates that the class has @Bean definitions and can be used by the Spring IoC container.
+@Bean	Marks a method that will return an object to be managed by the Spring container.
+@PropertySource	Loads properties from an external file into the Spring Environment.
+
+2. Dependency Injection Annotations
+Annotation	Description
+@Autowired	Automatically injects dependencies by type.
+@Qualifier	Specifies which bean to inject when multiple beans of the same type exist.
+@Component	Marks a class as a Spring-managed component.
+@Service	Specialized @Component for service-layer classes.
+@Repository	Specialized @Component for data access classes.
+@Controller	Specialized @Component for handling web requests.
+
+3. Web and REST Annotations
+@RestController	Combines @Controller and @ResponseBody. Used for RESTful web services.
+@RequestMapping	Maps HTTP requests to handler methods or classes.
+@GetMapping	    Shortcut for @RequestMapping with method = RequestMethod.GET.
+@PostMapping	Shortcut for @RequestMapping with method = RequestMethod.POST.
+@PutMapping	    Shortcut for @RequestMapping with method = RequestMethod.PUT.
+@DeleteMapping	Shortcut for @RequestMapping with method = RequestMethod.DELETE.
+@PathVariable	Binds a method parameter to a URI template variable.
+@RequestParam	Binds a method parameter to a query parameter or form data.
+
+4. Validation Annotations
+Annotation	Description
+@Valid	Marks a method parameter or field for validation using validation constraints.
+@NotNull	Ensures the field is not null.
+@Size	Sets size constraints for a field.
+@Email	Validates that a field is a valid email address.
+@Pattern	Validates a field using a regular expression.
