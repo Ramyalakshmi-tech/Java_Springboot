@@ -1,0 +1,102 @@
+1. polymorphism
+Polymorphism is a core concept of object-oriented programming (OOP) where the same method or operation behaves differently based on the object it is applied to.
+Polymorphism can be achieved through method overriding (runtime polymorphism) or method overloading (compile-time polymorphism).
+
+Here’s a real-time example:
+Scenario: Payment Processing System
+Imagine a system where we process payments for different payment methods such as credit card, debit card, and UPI. Each payment method has a unique implementation for processing the payment.
+
+Code Example
+java
+Copy code
+// Base class
+class Payment {
+    public void makePayment(double amount) {
+        System.out.println("Making a generic payment of " + amount);
+    }
+}
+
+// Subclass for Credit Card payment
+class CreditCardPayment extends Payment {
+    @Override
+    public void makePayment(double amount) {
+        System.out.println("Processing credit card payment of " + amount);
+    }
+}
+
+// Subclass for Debit Card payment
+class DebitCardPayment extends Payment {
+    @Override
+    public void makePayment(double amount) {
+        System.out.println("Processing debit card payment of " + amount);
+    }
+}
+
+// Subclass for UPI payment
+class UpiPayment extends Payment {
+    @Override
+    public void makePayment(double amount) {
+        System.out.println("Processing UPI payment of " + amount);
+    }
+}
+
+public class PolymorphismExample {
+    public static void main(String[] args) {
+        // Example of runtime polymorphism
+        Payment payment;
+
+        // Credit Card Payment
+        payment = new CreditCardPayment();
+        payment.makePayment(100.00);
+
+        // Debit Card Payment
+        payment = new DebitCardPayment();
+        payment.makePayment(200.00);
+
+        // UPI Payment
+        payment = new UpiPayment();
+        payment.makePayment(300.00);
+    }
+}
+Output
+plaintext
+Copy code
+Processing credit card payment of 100.0
+Processing debit card payment of 200.0
+Processing UPI payment of 300.0
+Explanation
+Polymorphism in Action:
+
+The makePayment method is overridden in each subclass (CreditCardPayment, DebitCardPayment, UpiPayment).
+At runtime, the JVM determines which method to execute based on the actual object type.
+Dynamic Dispatch:
+
+The program uses a reference of the base class (Payment) to call the overridden methods in the subclasses.
+Advantages of Polymorphism
+Flexibility: Code is more flexible and easier to extend. Adding a new payment method (e.g., WalletPayment) just requires creating a new subclass without changing existing code.
+Reusability: The base class can be reused across different implementations.
+Real-World Analogy
+Think of a Universal Remote:
+The same remote can control different devices like TV, AC, or a music system.
+The behavior of the button press changes based on the device being controlled.
+
+2. Abstract:-
+	• Abstract class contains abstarct methods and non abstract methods
+	• We can't create obj of abstract class
+	• But we can create obj of extended class
+	• If we don't want to define any methods in abstract class, call that method as abstract. So we can only define it.
+
+3.Interfaces:-
+	• If abstract class with only abstract methods , create interface instead of abstract class
+	• Interface A{ }
+	• Public abstract can be removed in methods
+	• We can't create obj of interface
+	• Interface shows us only design
+	• Class implements interface
+	• Again if we haven't defined , it will be absract class
+	• All the variables inside interface are static and final
+	• One class can implement multiple interfaces
+	• If the interface extends another interface not implements
+
+4. Multithreading:-
+
