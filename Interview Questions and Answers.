@@ -99,4 +99,6 @@ The behavior of the button press changes based on the device being controlled.
 	• If the interface extends another interface not implements
 
 4. Multithreading:-
-
+we can implement by 2 ways 
+1. by extends thread
+2. by using runnable class.
