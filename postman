@@ -6,11 +6,11 @@ Endpoint:
 
 The specific API route (e.g., /users/page).
 Query Parameters (for @RequestParam):
-
 Add after a ? in key-value pairs (e.g., ?page=1&size=10).
-Path Variables (for @PathVariable):
 
+Path Variables (for @PathVariable):
 Replace placeholders in the endpoint (e.g., /users/{id} becomes /users/123).
+
 Example
 API Details
 Base URL: http://localhost:8080
