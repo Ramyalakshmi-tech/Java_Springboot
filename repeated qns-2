@@ -1,0 +1,14 @@
+1.Difference between HashMap and TreeMap?
+2. why Amazon prime is changed from microservices to monolithic?
+3. time complexity to access HashMap and TreeMap ? HashMap(O(1)- hashMap and O(log n) - TreeMap)
+4. Role of Java Collection framework in dev?
+5.Describe a scenerio where u used priority queue and why?
+6. How does Java Polymorphism in programming model?
+7.where to use interface and where to use abstract methods?
+8.diff between throwable and exception?
+9.data shared resources is accessed safely by multiple threads?
+10.diff between aunthentication and authorization?
+11.service oriented Architecture ? 
+12. challenges of microservices n your project?
+13. How did you roll back a commit that has been pushed to git repository?
+14. 
