@@ -2,7 +2,8 @@ Authentication and Authorization in Web Development
 Authentication and Authorization are two critical aspects of security in web applications. They are often used together but refer to different concepts:
 
 1. Authentication
-Definition: Authentication is the process of verifying the identity of a user, system, or service. It ensures that the entity requesting access is who it claims to be.
+Definition: Authentication is the process of verifying the identity of a user, system, or service. It ensures that the entity requesting access is 
+who it claims to be.
 Goal: To check if the user is who they say they are.
 Authentication Methods
 
