@@ -102,3 +102,58 @@ The behavior of the button press changes based on the device being controlled.
 we can implement by 2 ways 
 1. by extends thread
 2. by using runnable class.
+
+5.The terms Collection and Collections in Java are closely related but serve different purposes. Here's a breakdown:
+1. Collection (Interface):
+Definition: Collection is a root-level interface in the Java Collections Framework.
+Purpose: It provides a common interface for working with a group of objects (elements). It is the parent interface of interfaces like List, Set, and Queue.
+Key Characteristics:
+Part of java.util package.
+Represents a group of individual elements.
+Methods include:
+add(E e): Add an element.
+remove(Object o): Remove an element.
+contains(Object o): Check if the collection contains an element.
+size(): Get the size of the collection.
+iterator(): Get an iterator over the elements.
+Example:
+
+java
+Copy code
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Collection<String> collection = new ArrayList<>();
+        collection.add("Java");
+        collection.add("Python");
+        System.out.println(collection);
+    }
+}
+2. Collections (Utility Class):
+Definition: Collections is a utility class that provides static methods for working with collections.
+Purpose: It contains methods for operations like sorting, searching, reversing, and thread-safe wrappers for collections.
+Key Characteristics:
+Part of java.util package.
+Provides utility methods for Collection objects.
+Common methods:
+Collections.sort(List<T> list): Sort a list.
+Collections.reverse(List<T> list): Reverse a list.
+Collections.shuffle(List<?> list): Shuffle the elements.
+Collections.synchronizedList(List<T> list): Create a thread-safe list.
+Example:
+
+java
+Copy code
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> list = new ArrayList<>(Arrays.asList(3, 1, 4, 2));
+        Collections.sort(list);
+        System.out.println("Sorted: " + list);
+
+        Collections.reverse(list);
+        System.out.println("Reversed: " + list);
+    }
+}
