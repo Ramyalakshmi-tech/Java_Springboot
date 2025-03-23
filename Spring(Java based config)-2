@@ -8,7 +8,7 @@ public class solution{
     obj.code();
 }
 }
-since, it is java based , cretae objects manually..In xml based config, bean tags are used, here @bean annotation needed
+since, it is java based , creat objects manually..In xml based config, bean tags are used, here @bean annotation needed
 AppConfig.class folder
 
 @Configuration
